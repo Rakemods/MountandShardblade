@@ -1,0 +1,26 @@
+25
+mesh arrow_new_icon
+mesh editor_plane_low
+prefab _barrier_12x04m
+prefab _barrier_16x04m
+prefab captain_attack_spawn
+prefab captain_defender_spawn
+prefab european_castle_bridge_a_new
+prefab mp_spawnpoint
+texture cg_50c_5b
+texture cliff_c_d
+texture cliff_c_h
+texture cliff_c_n
+texture cliff_c_s
+texture desert_floor_a
+texture ice_a_d
+texture ice_a_n
+texture ice_a_s
+texture lens_dirt
+texture lens_star
+texture rock_b_d
+texture rock_b_h
+texture rock_b_n
+texture rock_b_s
+texture semi_cloudy_2
+texture sun_core2

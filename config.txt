@@ -1,0 +1,25 @@
+# Config file for MountandShardblade
+#
+# To use: Simply change the value on the right hand side of the = side. Don't modify the name of the field!
+# Troubleshooting: The logs will tell you what went wrong with reading the config file.
+# Lines starting with `#` are ignored
+
+# Keybindings
+summonShardbladeHotkey=q  # Key for summoning shardblade, ensure no conflict with other hotkeys
+shardplateDashHotkey=m1   # Key for shardplate dash (check this works with your mod logic)
+
+# Timers
+timeToSummonShardblade=3.0  # Summon delay for shardblade (seconds)
+
+# Health Limits
+playerShardplateHealthLimit=500.0  # Player shardplate health
+aiShardplateHealthLimit=750.0      # AI shardplate health
+
+# Testing Modes
+testingMode=true         # Enable testing mode (both sides)
+testingModeOneSide=false # Testing mode for one side only (opposing AI shardbearer)
+
+# In testing mode, each side on a battle will have one AI Shardbearer each
+testingMode=true
+# In one side testing mode, the opposing side will have an AI Shardbearer but not your side
+testingModeOneSide=false

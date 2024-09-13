@@ -1,0 +1,54 @@
+<Prefab>
+	<Constants>
+	</Constants>
+	<Window>
+		<Widget HeightSizePolicy="CoverChildren" WidthSizePolicy="CoverChildren"
+				HorizontalAlignment="Center" VerticalAlignment="Bottom"
+				MarginBottom="150" IsEnabled="true">
+			<Children>
+				<!-- This is the progress slider for the summon action -->
+				<SliderWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+							  SuggestedWidth="290" SuggestedHeight="33.6" VerticalAlignment="Center"
+							  Filler="Filler" Handle="SliderHandle" Locked="false" IsDiscrete="false"
+							  MinValueFloat="0" MaxValueFloat="@MaxTime" ValueFloat="@CurrentTime">
+					<Children>
+						<!-- Slider background -->
+						<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+								SuggestedWidth="290" SuggestedHeight="30"
+								HorizontalAlignment="Center" VerticalAlignment="Center"
+								Sprite="SPOptions\standart_slider_canvas" IsEnabled="false"/>
+
+						<!-- Slider bar -->
+						<Widget Id="Filler" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+								SuggestedWidth="276" SuggestedHeight="30" VerticalAlignment="Center"
+								Sprite="SPOptions\standart_slider_fill" ClipContents="true">
+							<Children>
+								<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+										SuggestedWidth="276" SuggestedHeight="28"
+										HorizontalAlignment="Left" VerticalAlignment="Center"
+										Sprite="SPOptions\standart_slider_fill"/>
+							</Children>
+						</Widget>
+
+						<!-- Slider frame -->
+						<Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+								SuggestedWidth="320" SuggestedHeight="52"
+								HorizontalAlignment="Center" VerticalAlignment="Center"
+								Sprite="SPOptions\standart_slider_frame" IsEnabled="false"/>
+
+						<!-- Handle/Bar that goes with the slider -->
+						<Widget Id="SliderHandle" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+								SuggestedWidth="14" SuggestedHeight="38"
+								HorizontalAlignment="Left" VerticalAlignment="Center"
+								Brush="SPOptions.Slider.Handle" IsVisible="true"/>
+
+						<!-- Text above the slider (Summoning status) -->
+						<TextWidget WidthSizePolicy="CoverChildren" HeightSizePolicy="CoverChildren"
+									HorizontalAlignment="Center" VerticalAlignment="Top"
+									PositionYOffset="-40" Text="@ShardbladeSummonText" ClipContents="true"/>
+					</Children>
+				</SliderWidget>
+			</Children>
+		</Widget>
+	</Window>
+</Prefab>

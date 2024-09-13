@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module>
+	<Name value="MountandShardblade"/>
+	<Id value="MountandShardblade"/>
+	<Version value="v1.2.11"/>
+	<SingleplayerModule value="true"/>
+	<MultiplayerModule value="false"/>
+	<Official value="false"/>
+
+	<!-- Dependent modules with explicit versions -->
+	<DependedModules>
+		<DependedModule Id="Native" DependentVersion="v1.2.11"/>
+		<DependedModule Id="SandBoxCore" DependentVersion="v1.2.11"/>
+		<DependedModule Id="Sandbox" DependentVersion="v1.2.11"/>
+		<DependedModule Id="StoryMode" DependentVersion="v1.2.11"/>
+		<DependedModule Id="CustomBattle" DependentVersion="v1.2.11"/>
+		<DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.10.1"/>
+		<DependedModule Id="Bannerlord.ButterLib" DependentVersion="v2.9.3"/>
+	</DependedModules>
+
+	<!-- SubModule declaration -->
+	<SubModules>
+		<SubModule>
+			<Name value="MountAndShardblade"/>
+			<DLLName value="MountandShardblade.dll"/>
+			<SubModuleClassType value="MountandShardblade.SubModule"/>
+			<Tags>
+				<Tag key="DedicatedServerType" value="none"/>
+				<Tag key="IsNoRenderModeElement" value="false"/>
+			</Tags>
+
+			<!-- Script mappings -->
+			<SubModuleScripts>
+				<Script>
+					<Name value="MountandShardblade.ShardPatchLogic"/>
+				</Script>
+				<Script>
+					<Name value="MountandShardblade.UnifiedMissionBehavior"/>
+				</Script>
+				<Script>
+					<Name value="MountandShardblade.Shardplate.ShardplateAgentComponent"/>
+				</Script>
+				<Script>
+					<Name value="MountandShardblade.Shardblade.ShardbladeAgentComponent"/>
+				</Script>
+				<Script>
+					<Name value="MountandShardblade.Core.HighstormManager"/>
+				</Script>
+				<Script>
+					<Name value="MountandShardblade.Core.StormlightSystem"/>
+				</Script>
+			</SubModuleScripts>
+		</SubModule>
+	</SubModules>
+
+	<!-- Resources: Items, Prefabs, Sound Events, and Particles -->
+	<Items>
+		<Item>
+			<Name value="shardblade_default"/>
+			<Type value="Weapon"/>
+		</Item>
+		<Item>
+			<Name value="half_shard_shield"/>
+			<Type value="Shield"/>
+		</Item>
+	</Items>
+
+	<Prefabs>
+		<Prefab>
+			<Name value="gui/prefabs/shardplatehealthui.xml"/>
+		</Prefab>
+		<Prefab>
+			<Name value="gui/prefabs/shardplateabilityui.xml"/>
+		</Prefab>
+		<Prefab>
+			<Name value="gui/prefabs/shardbladesummonui.xml"/>
+		</Prefab>
+	</Prefabs>
+
+	<SoundEvents>
+		<SoundEvent>
+			<Name value="event:/mission/combat/shield/metal_broken"/>
+			<Path value="event:/mission/combat/shield/metal_broken"/>
+		</SoundEvent>
+		<SoundEvent>
+			<Name value="event:/mission/combat/impact/metal_weapon/metal_shield"/>
+			<Path value="event:/mission/combat/impact/metal_weapon/metal_shield"/>
+		</SoundEvent>
+		<SoundEvent>
+			<Name value="MountandShardblade/combat/shardblade/summon"/>
+			<Path value="MountandShardblade/combat/shardblade/summon"/>
+		</SoundEvent>
+	</SoundEvents>
+
+	<ParticleSystems>
+		<ParticleSystem>
+			<Name value="smoke_4"/>
+		</ParticleSystem>
+		<ParticleSystem>
+			<Name value="tutorial_firefly_persistent"/>
+		</ParticleSystem>
+		<ParticleSystem>
+			<Name value="outdoor_fire_smoke_small"/>
+		</ParticleSystem>
+		<ParticleSystem>
+			<Name value="psys_game_sparkle_a"/>
+		</ParticleSystem>
+	</ParticleSystems>
+
+	<!-- Scene information -->
+	<Scene>
+		<SceneName value="ShardplateArenaScene"/>
+		<SceneType value="Multiplayer"/>
+	</Scene>
+</Module>

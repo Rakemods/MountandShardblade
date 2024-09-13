@@ -1,0 +1,48 @@
+<Prefab>
+  <Constants>
+  </Constants>
+  <Window>
+    <Widget HeightSizePolicy="CoverChildren" WidthSizePolicy="CoverChildren" 
+			HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+			MarginBottom="50" MarginRight="60" IsEnabled="false">
+      <Children>
+        <SliderWidget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+					  SuggestedWidth="200" SuggestedHeight="18" VerticalAlignment="Center" 
+					  Filler="Filler" Handle="SliderHandle" Locked="false" IsDiscrete="false"
+					  MinValueFloat="0" MaxValueFloat="@ShardplateHealthMax" ValueFloat="@ShardplateHealth"> 
+          <Children>
+			<!-- Canvas -->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" 
+					SuggestedWidth="200" SuggestedHeight="18" 
+					HorizontalAlignment="Center" VerticalAlignment="Center" 
+					Sprite="SPOptions\standart_slider_canvas" IsEnabled="false" IsVisible="true"/>
+			
+			<!-- Slider bar -->
+			<Widget Id="Filler" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"
+					SuggestedWidth="200" SuggestedHeight="18" VerticalAlignment="Center"				
+					Sprite="SPOptions\standart_slider_fill" HueFactor="27" ClipContents="true">
+              <Children>
+                <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" 
+						SuggestedWidth="200" SuggestedHeight="18" 
+						HorizontalAlignment="Left" VerticalAlignment="Center"
+						Sprite="SPOptions\standart_slider_fill"/>
+              </Children>
+            </Widget>
+			
+			<!-- Frame -->
+            <Widget WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" 
+					SuggestedWidth="200" SuggestedHeight="52" 
+					HorizontalAlignment="Center" VerticalAlignment="Center" 
+					Sprite="SPOptions\standart_slider_frame" IsEnabled="false" IsVisible="false"/>
+			
+			<!-- Handle/Bar that goes with the slider -->
+            <Widget Id="SliderHandle" DoNotAcceptEvents="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed"			
+					SuggestedWidth="14" SuggestedHeight="38" 
+					HorizontalAlignment="Left" VerticalAlignment="Center" 
+					Brush="SPOptions.Slider.Handle" IsVisible="false"/>
+          </Children>
+        </SliderWidget>
+      </Children>
+    </Widget>
+  </Window>
+</Prefab>
